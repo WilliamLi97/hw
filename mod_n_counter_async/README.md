@@ -1,14 +1,14 @@
 # Modulo $n$ Counters
 Modulo counters count from 0 to $n-1$. After $n-1$, the counter wraps around to 0. This is one implementation of these counters which increments on the rising edge of the input signal and is asynchronous. This block is used in clock-divide-by-$X$ circuits.
 
-We can implement these counters by simply wiring the D flip-flops in a clever way. To start, we will need $\lceil \log_{2}(n) \rceil$ flip-flops to represent $n$ numbers (0 to $n-1$, inclusive). We can then look at the binary representation of the numbers:
+We can implement these counters by simply wiring the D flip-flops in a clever way. To start, we will need $\lceil \log_{2}(n) \rceil$ flip-flops to represent $n$ numbers (0 to $n-1$, inclusive). We can then look at the binary representation of the numbers:  
 
-$0 \rightarrow 000$
-$1 \rightarrow 001$
-$2 \rightarrow 010$
-$3 \rightarrow 011$
-$4 \rightarrow 100$
-$5 \rightarrow 101$
+$0 \rightarrow 000$  
+$1 \rightarrow 001$  
+$2 \rightarrow 010$  
+$3 \rightarrow 011$  
+$4 \rightarrow 100$  
+$5 \rightarrow 101$  
 $...$
 
 Note the first bit is always toggling between 0 and 1. The second bit also toggles between 0 and 1, but only when the first bit transitions from 1 to 0. In general, bit $n$ toggles when bit $n-1$ transitions from 1 to 0. 
