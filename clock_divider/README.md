@@ -1,4 +1,4 @@
-# Clock-divide-by-$X$
+# Clock-divide-by-X
 
 The purpose of this circuit is to reduce the frequency of a clock signal by a factor of $X$ or increase the period $T$ by a factor of $X$. Although it is unlikely that this circuit will be used in a real-world situation, this is (apparently) a common interview question.
 
@@ -34,5 +34,5 @@ The reason why this type of circuit is unlikely to be practical is because it is
 
 ## Implementations
 ### Clock-divide-by-3
-An implementation and testbench for a clock-divide-by-3 counter is included. It can be simulated to generate a `.vcd` file using the included makefile: 
+An implementation and testbench for a clock-divide-by-3 counter is included. It can be simulated to generate a `.vcd` file using the included makefile:  
 `make compile COMPILE_MODULE=clock_divider3_tb`
