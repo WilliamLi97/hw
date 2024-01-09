@@ -13,13 +13,13 @@ Let us start by examining the truth table for the full adder, so we can derive t
 |       1|  1|  0|   |        1|  0|
 |       1|  1|  1|   |        1|  1|
 
-Using Karnaugh maps (K-maps) or Boolean algebra, we get:
-$C_{out} = AB + C_{in}B + C_{in}A$
-$C_{out} = AB + (A + B)C_{in}$
+Using Karnaugh maps (K-maps) or Boolean algebra, we get:  
+$C_{out} = AB + C_{in}B + C_{in}A$  
+$C_{out} = AB + (A + B)C_{in}$  
 
-$S = C_{in}\bar{A}\bar{B} + \bar{C}_{in}\bar{A}B + C_{in}AB + \bar{C}_{in}A\bar{B}$
-$S = C_{in}(\bar{A}\bar{B} + AB) + \bar{C}_{in}(\bar{A}B+A\bar{B})$
-$S = C_{in}\overline{(A \oplus B)} + \bar{C}_{in}(A \oplus B)$
+$S = C_{in}\bar{A}\bar{B} + \bar{C}_{in}\bar{A}B + C_{in}AB + \bar{C}_{in}A\bar{B}$  
+$S = C_{in}(\bar{A}\bar{B} + AB) + \bar{C}_{in}(\bar{A}B+A\bar{B})$  
+$S = C_{in}\overline{(A \oplus B)} + \bar{C}_{in}(A \oplus B)$  
 $S = C_{in} \oplus A \oplus B$
 
 At this point, we can simply implement these two signals and we are done. Now that we have these equations, we can also understand how to implement the full adder using two half adders. Recall that a half adder implements:
@@ -34,9 +34,9 @@ We see that $S_{ha1}= S_{fa}$ is already in the correct form, but we want $C_{fa
 
 ## Implementations
 ### Full adder
-An implementation and testbench for a full adder is included. It can be simulated to generate a `.vcd` file using the included makefile: 
+An implementation and testbench for a full adder is included. It can be simulated to generate a `.vcd` file using the included makefile:  
 `make compile COMPILE_MODULE=full_adder_tb`
 
 ### Double half adder
-An implementation and testbench for a full adder using two half adders is included. It can be simulated to generate a `.vcd` file using the included makefile: 
+An implementation and testbench for a full adder using two half adders is included. It can be simulated to generate a `.vcd` file using the included makefile:  
 `make compile COMPILE_MODULE=double_half_adder_tb`

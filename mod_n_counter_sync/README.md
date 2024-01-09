@@ -33,9 +33,9 @@ We can follow the same process for $n = 5$ and so on:
 |    1|    1|    0|     |     DC|     DC|     DC|
 |    1|    1|    1|     |     DC|     DC|     DC|
 
-We find that for $n = 5$: 
-$Q_2^+ = Q_1 Q_0$, 
-$Q_1^+ = Q_1 \bar{Q}_0 + \bar{Q}_1 Q_0 = Q_1 \oplus Q_0$,
+We find that for $n = 5$:  
+$Q_2^+ = Q_1 Q_0$  
+$Q_1^+ = Q_1 \bar{Q}_0 + \bar{Q}_1 Q_0 = Q_1 \oplus Q_0$  
 $Q_0^+ = \bar{Q}_2 \bar{Q}_0$
 
 ## Limitations
@@ -43,9 +43,9 @@ Due to the use of DCs, the logic requirement for state transitions is reduced, b
 
 ## Implementations
 ### Synchronous modulo 3 counter
-An implementation and testbench for a synchronous modulo 3 counter is included. It can be simulated to generate a `.vcd` file using the included makefile: 
+An implementation and testbench for a synchronous modulo 3 counter is included. It can be simulated to generate a `.vcd` file using the included makefile:  
 `make compile COMPILE_MODULE=mod3_counter_tb`
 
 ### Synchronous modulo 5 counter
-An implementation and testbench for a synchronous modulo 5 counter is included. It can be simulated to generate a `.vcd` file using the included makefile: 
+An implementation and testbench for a synchronous modulo 5 counter is included. It can be simulated to generate a `.vcd` file using the included makefile:  
 `make compile COMPILE_MODULE=mod5_counter_tb`
