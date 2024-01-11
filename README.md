@@ -4,20 +4,20 @@ This repository is a collection of my various RTL implementations of hardware bl
 If there are any issues with my implementations or explanations, please feel free to raise them. This repository was created to the best of my knowledge, but I am far from an expert, and I am always looking to improve my understanding. 
 
 # Prerequistites
-I do not have access to lincensed tools used in the industry, so everything is deisgned within the limitations of open-source tools. Additionally, all development was done on Linux (Ubuntu), or more specifically, Windows Subsystem for Linux (WSL). The individual packages needed will be detailed below, but if getting started as quickly as possible is desired, the following command includes all the packages I use for this repository:
+I do not have access to lincensed tools used in the industry, so everything is deisgned within the limitations of open-source tools. Additionally, all development was done on Linux (Ubuntu), or more specifically, Windows Subsystem for Linux (WSL). The individual packages needed will be detailed below, but if getting started as quickly as possible is desired, the following command includes all the packages I use for this repository:  
 `sudo apt-get install iverlog gtkwave build-essential`
 
 ## Icarus Verilog
-These testbenches were created with the intention to use Icarus Verilog as the simulator. Hence, they are fairly basic and verification of the waveforms were done manually. Icarus Verilog can be installed using the following command:
+These testbenches were created with the intention to use Icarus Verilog as the simulator. Hence, they are fairly basic and verification of the waveforms were done manually. Icarus Verilog can be installed using the following command:  
 `sudo apt-get install iverilog`
 
 ## GTKWave
-GTKWave is used to view the `.vcd` (waveform) files:
+GTKWave is used to view the `.vcd` (waveform) files:  
 `sudo apt-get install gtkwave`
 
 ## Build-Essential (Make)
-For directories containing a testbench, a makefile is included for convenience when compiling. This build-essential package includes various packages required for C and C++ compilation; it includes libc, gcc, g++, make, and more. We are specifically looking for the ability to use the makefiles, so the bare minimum is simply the make package:
+For directories containing a testbench, a makefile is included for convenience when compiling. This build-essential package includes various packages required for C and C++ compilation; it includes libc, gcc, g++, make, and more. We are specifically looking for the ability to use the makefiles, so the bare minimum is simply the make package:  
 `sudo apt-get install make`
 
-However, I do have the build-essential package installed, so if you encounter any issues running the makefiles, please try installing the build-essential package:
+However, I do have the build-essential package installed, so if you encounter any issues running the makefiles, please try installing the build-essential package:  
 `sudo apt-get install build-essential`
