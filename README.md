@@ -1,7 +1,7 @@
 # Purpose
 This repository is a collection of my various RTL implementations of hardware blocks. The inclusion of hardware blocks does not follow any particular pattern; some are things that I find interesting, some are commonly used blocks, some are (apparently) interview questions, and some are simply used as a part of another hardware block. These implementations are meant to serve as a more practical version of note-taking. Descriptions of how these hardware blocks work or how to derive the design are included in the various directories.
 
-If there are any issues with my implementations or explanations, please feel free to raise them. This repository was created to the best of my knowledge, but I am far from an expert, and I am always looking to improve my understanding. 
+If there are any issues with my implementations or explanations, please feel free to raise them. This repository was created to the best of my knowledge, but I am far from an expert, and I am always looking to improve my understanding. It is my intention to continue updating this repository as I learn about new hardware structures, protocols, and best practices.
 
 # Prerequistites
 I do not have access to lincensed tools used in the industry, so everything is deisgned within the limitations of open-source tools. Additionally, all development was done on Linux (Ubuntu), or more specifically, Windows Subsystem for Linux (WSL). The individual packages needed will be detailed below, but if getting started as quickly as possible is desired, the following command includes all the packages I use for this repository:  
