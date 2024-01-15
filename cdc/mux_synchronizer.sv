@@ -1,35 +1,28 @@
-module moduleName #(
-    parameter DATA_WIDTH   = 32,
-    parameter CHAIN_LENGTH = 3
+module mux_synchronizer #(
+    parameter CHAIN_LENGTH = 3,
+    parameter DATA_WIDTH   = 32
 ) (
-    input logic reset_i,
-    input logic clk_i,
-    input logic en_src_i,
-    input logic [DATA_WIDTH-1:0] data_i,
+    input  logic                  reset_ni,
+    input  logic                  clk_i,
+    input  logic                  en_i,
+    input  logic [DATA_WIDTH-1:0] data_i,
     output logic [DATA_WIDTH-1:0] data_o
 );
 
   logic en_dest;
 
   chain_synchronizer #(
-      .LENGTH(3)
-  ) cs_0 (
-      .reset_i(reset_i),
-      .clk_i  (clk_i),
-      .data_i (en_src_i),
-      .data_o (en_dest)
+      .LENGTH(CHAIN_LENGTH)
+  ) cs (
+      .reset_ni(reset_ni),
+      .clk_i   (clk_i),
+      .data_i  (en_i),
+      .data_o  (en_dest)
   );
 
-  always_ff @(posedge clk_i, negedge reset_i) begin
-    if (~reset_i) begin
-      data_o <= 0;
-    end else begin
-      if (en_dest) begin
-        data_o <= data_i;
-      end else begin
-        data_o <= data_o;
-      end
-    end
+  always_ff @(posedge clk_i, negedge reset_ni) begin
+    if (~reset_ni) data_o <= '0;
+    else data_o <= en_dest ? data_i : data_o;
   end
 
 endmodule

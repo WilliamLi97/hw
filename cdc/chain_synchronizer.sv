@@ -1,7 +1,7 @@
 module chain_synchronizer #(
     parameter LENGTH = 3
 ) (
-    input  logic reset_i,
+    input  logic reset_ni,
     input  logic clk_i,
     input  logic data_i,
     output logic data_o
@@ -11,12 +11,9 @@ module chain_synchronizer #(
 
   assign data_o = pipe[LENGTH-1];
 
-  always_ff @(posedge clk_i, negedge reset_i) begin
-    if (~reset_i) begin
-        pipe <= 0;
-    end else begin
-        pipe <= {pipe[LENGTH-2:1], data_i};
-    end
+  always_ff @(posedge clk_i, negedge reset_ni) begin
+    if (~reset_ni) pipe <= '0;
+    else pipe <= {pipe[LENGTH-2:0], data_i};
   end
 
 endmodule
