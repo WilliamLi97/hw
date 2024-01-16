@@ -85,13 +85,9 @@ module fifo_tb #(
     $finish();
   end
 
-  integer i;
   initial begin
     $dumpfile("fifo_tb.vcd");
     $dumpvars(0, fifo_tb);
-    // for (i = 0; i < LENGTH; i = i + 1) begin
-    //   $dumpvars(0, fifo_0.mem[i]);
-    // end
   end
 
 endmodule
