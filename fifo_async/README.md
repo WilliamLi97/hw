@@ -22,5 +22,3 @@ One last thing I want to mention is that that this implementation will create a 
 ### Asynchronous FIFO
 An implementation and testbench for an asynchronous FIFO is included. It can be simulated to generate a `.vcd` file using the included makefile:  
 `make compile COMPILE_MODULE=fifo_async_tb`
-
-This implementation was done using binary-to-gray converters. Ideally, it would use gray code counters rather than binary counters hooked up to the converters, but I currently do not know of a way to generate an arbitrary length gray code counter. Additionally, simplifying the logic for a gray counter with a larger number of bits would get cumbersome very quickly. I wonder if it would be possible to use a Python script to generate a truth table and logical expressions, then use the SymPy library to simplify the expressions before manually defining it all in a module. Perhaps something to look into in the future.

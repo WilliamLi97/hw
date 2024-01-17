@@ -102,6 +102,11 @@ An implementation and testbench for a synchronous 3-bit gray code counter is inc
 `make compile COMPILE_MODULE=gray_counter3_sync_tb`
 
 ### Gray Counter Logic Generator
-A Python3 script for generating the logic for $N$-bit gray counters is included. It expects a "bits" argument (positional argument is sufficient) which specifies the bit length of the counter. For example, to generate a 4-bit gray counter:
+A Python3 script for generating the logic for $N$-bit gray counters is included. The required libraries are `mpmath` and `sympy`, which can be installed using `pip`:
+`pip install mpmath`
+`pip install sympy`
+
+The script expects a "bits" argument (positional argument is sufficient) which specifies the bit length of the counter. For example, to generate a 4-bit gray counter:
 `python3 gray_counter_logic_gen.py 4`
+
 It can be modified to generate the logic for binary counters, and it should be able to generate the logic for any truth table with a bit of tweaking. 
